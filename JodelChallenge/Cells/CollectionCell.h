@@ -11,4 +11,5 @@
 @interface CollectionCell : UICollectionViewCell
 
 - (void)setupWithPhoto:(NSURL *)url;
+
 @end
