@@ -10,6 +10,11 @@
 
 @interface CollectionCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 - (void)setupWithPhoto:(NSURL *)url;
+- (void)setupWithTitle:(NSString *)title;
 
 @end

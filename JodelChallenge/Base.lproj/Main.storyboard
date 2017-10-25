@@ -33,7 +33,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Je6-1H-LZ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="G0x-Nh-3ST">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,19 +48,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-oE-nWL">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gBN-oE-nWL">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="37"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyH-gQ-YfL">
+                                            <rect key="frame" x="0.0" y="35.5" width="50" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="L6j-wi-T8j">
+                                            <rect key="frame" x="7" y="7" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="yyH-gQ-YfL" firstAttribute="centerX" secondItem="HNq-Nl-u9j" secondAttribute="centerX" id="4pB-Wm-LuR"/>
+                                    <constraint firstItem="L6j-wi-T8j" firstAttribute="centerY" secondItem="HNq-Nl-u9j" secondAttribute="centerY" id="9Sp-Ay-Vwj"/>
+                                    <constraint firstAttribute="bottom" secondItem="yyH-gQ-YfL" secondAttribute="bottom" id="HJy-dX-tks"/>
+                                    <constraint firstItem="L6j-wi-T8j" firstAttribute="centerX" secondItem="HNq-Nl-u9j" secondAttribute="centerX" id="Yih-MD-v5v"/>
                                     <constraint firstItem="gBN-oE-nWL" firstAttribute="top" secondItem="HNq-Nl-u9j" secondAttribute="top" id="a0v-Wd-JhM"/>
+                                    <constraint firstItem="yyH-gQ-YfL" firstAttribute="width" secondItem="HNq-Nl-u9j" secondAttribute="width" id="der-7J-0Tq"/>
                                     <constraint firstItem="gBN-oE-nWL" firstAttribute="leading" secondItem="HNq-Nl-u9j" secondAttribute="leading" id="nSn-Ww-eB7"/>
                                     <constraint firstAttribute="trailing" secondItem="gBN-oE-nWL" secondAttribute="trailing" id="qhT-oS-fhh"/>
-                                    <constraint firstAttribute="bottom" secondItem="gBN-oE-nWL" secondAttribute="bottom" id="qrn-bi-MTC"/>
+                                    <constraint firstAttribute="bottom" secondItem="gBN-oE-nWL" secondAttribute="bottom" constant="13" id="qrn-bi-MTC"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="L6j-wi-T8j" id="pfy-2y-Swe"/>
                                     <outlet property="imageView" destination="gBN-oE-nWL" id="mAR-kb-i7X"/>
+                                    <outlet property="titleLabel" destination="yyH-gQ-YfL" id="2BK-c4-7LD"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -73,7 +89,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Rh-DI-kkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="-174"/>
+            <point key="canvasLocation" x="696.79999999999995" y="-181.25937031484258"/>
         </scene>
     </scenes>
 </document>

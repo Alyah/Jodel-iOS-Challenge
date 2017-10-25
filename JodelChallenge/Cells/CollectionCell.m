@@ -10,7 +10,6 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface CollectionCell()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -20,5 +19,8 @@
     [self.imageView setImageWithURL:url];
 }
 
+- (void)setupWithTitle:(NSString *)title {
+    [self.titleLabel setText:title];
+}
 
 @end
